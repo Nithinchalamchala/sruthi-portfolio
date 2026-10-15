@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1a1420"/>
+  <g fill="none" stroke="#f4eef6" stroke-width="4" stroke-linejoin="round">
+    <path d="M250 120l110 40v80c0 70-50 115-110 140-60-25-110-70-110-140v-80z" fill="#241c2b"/>
+    <path d="M250 205v70M215 240h70" stroke-width="10" stroke-linecap="round" stroke="#ff5c8a"/>
+    <rect x="470" y="110" width="110" height="80" rx="14" fill="#241c2b"/>
+    <rect x="530" y="210" width="110" height="80" rx="14" fill="#ff5c8a" stroke="#ff5c8a"/>
+    <rect x="470" y="310" width="110" height="80" rx="14" fill="#241c2b"/>
+    <path d="M580 150h30v60M585 290v20h-50" stroke-dasharray="6 6"/>
+    <path d="M360 250h110" stroke-dasharray="6 6"/>
+  </g>
+  <g font-family="JetBrains Mono, Menlo, monospace" font-size="16" fill="#f4eef6"><text x="490" y="157">#0x3fa</text><text x="490" y="357">#0x9c1</text></g>
+  <text x="550" y="257" font-family="JetBrains Mono, Menlo, monospace" font-size="16" fill="#241c2b">#0x7be</text>
+  <text x="400" y="460" text-anchor="middle" font-family="Inter Tight, Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="22" fill="#9d93a7">patient-owned · tamper-proof · emergency access</text>
+</svg>

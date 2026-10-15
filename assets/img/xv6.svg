@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1a1420"/>
+  <rect x="90" y="80" width="380" height="300" rx="16" fill="#f4eef6"/>
+  <circle cx="118" cy="106" r="7" fill="#4a3f55"/><circle cx="140" cy="106" r="7" fill="#4a3f55"/><circle cx="162" cy="106" r="7" fill="#4a3f55"/>
+  <g font-family="JetBrains Mono, Menlo, monospace" font-size="17" fill="#1a1420">
+    <text x="115" y="160">xv6 login: sruthi</text>
+    <text x="115" y="190">password: ********</text>
+    <text x="115" y="230">$ history</text>
+    <text x="115" y="258" fill="#7d7088">  1  ls</text>
+    <text x="115" y="284" fill="#7d7088">  2  cat README</text>
+    <text x="115" y="320">$ sched<tspan fill="#7d7088">ule</tspan><tspan>▌</tspan></text>
+  </g>
+  <g font-family="JetBrains Mono, Menlo, monospace" font-size="15" fill="#9d93a7"><text x="520" y="125">Q0</text><text x="520" y="205">Q1</text><text x="520" y="285">Q2</text></g>
+  <g fill="#f4eef6">
+    <rect x="560" y="105" width="40" height="30" rx="6"/><rect x="610" y="105" width="40" height="30" rx="6"/>
+    <rect x="560" y="185" width="40" height="30" rx="6" fill="#b9a3ff"/><rect x="610" y="185" width="40" height="30" rx="6" fill="#b9a3ff"/><rect x="660" y="185" width="40" height="30" rx="6" fill="#b9a3ff"/>
+    <rect x="560" y="265" width="40" height="30" rx="6" fill="#6a5d78"/>
+  </g>
+  <text x="400" y="455" text-anchor="middle" font-family="Inter Tight, Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="22" fill="#9d93a7">multi-level feedback queue scheduling</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#1a1420"/>
+  <path d="M230 400c-60 0-95-45-95-95 0-60 50-90 55-150 35 30 50 60 50 90 15-15 20-35 20-55 40 35 65 75 65 115 0 55-40 95-95 95z" fill="#ff5c8a"/>
+  <path d="M232 400c-25 0-42-20-42-42 0-28 25-42 30-70 30 25 55 45 55 72 0 22-18 40-43 40z" fill="#1a1420"/>
+  <g stroke="#1a1420" stroke-width="6">
+  <rect x="420" y="110" width="70" height="70" rx="10" fill="#2a2231"/>
+<rect x="490" y="110" width="70" height="70" rx="10" fill="#7d7088"/>
+<rect x="560" y="110" width="70" height="70" rx="10" fill="#f4eef6"/>
+<rect x="630" y="110" width="70" height="70" rx="10" fill="#4a3f55"/>
+<rect x="420" y="180" width="70" height="70" rx="10" fill="#f4eef6"/>
+<rect x="490" y="180" width="70" height="70" rx="10" fill="#4a3f55"/>
+<rect x="560" y="180" width="70" height="70" rx="10" fill="#4a3f55"/>
+<rect x="630" y="180" width="70" height="70" rx="10" fill="#2a2231"/>
+<rect x="420" y="250" width="70" height="70" rx="10" fill="#4a3f55"/>
+<rect x="490" y="250" width="70" height="70" rx="10" fill="#2a2231"/>
+<rect x="560" y="250" width="70" height="70" rx="10" fill="#7d7088"/>
+<rect x="630" y="250" width="70" height="70" rx="10" fill="#f4eef6"/>
+<rect x="420" y="320" width="70" height="70" rx="10" fill="#7d7088"/>
+<rect x="490" y="320" width="70" height="70" rx="10" fill="#f4eef6"/>
+<rect x="560" y="320" width="70" height="70" rx="10" fill="#4a3f55"/>
+<rect x="630" y="320" width="70" height="70" rx="10" fill="#4a3f55"/>
+  </g>
+  <text x="560" y="420" text-anchor="middle" font-family="JetBrains Mono, Menlo, monospace" font-size="16" fill="#9d93a7">risk heat map · floor 2</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Inter Tight, Inter, Helvetica, Arial, sans-serif" font-weight="700" font-size="22" fill="#9d93a7">identify · assess · manage</text>
+</svg>

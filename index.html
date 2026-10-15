@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sruthi Chalamchala — Portfolio</title>
+  <meta name="description" content="Portfolio of Chalamchala Seetha Sai Sruthi, Integrated M.Tech CSE student at VIT-AP University.">
+
+  <!-- Apply saved theme before paint -->
+  <script>
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    // hide animated elements until the scroll animations take over (removed if they can't load)
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-anim");
+  </script>
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400..600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ============ 1. NAVIGATION BAR (floating pill) ============ -->
+  <header class="nav-wrap">
+    <nav id="mainNav" class="navbar navbar-expand-lg pill-nav">
+      <a class="navbar-brand" href="#home" aria-label="Sruthi, home">
+        <span class="logo">S</span><span class="d-none d-sm-inline">Sruthi</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
+          <i class="bi bi-sun"></i>
+        </button>
+        <button class="navbar-toggler icon-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks"
+                aria-controls="navLinks" aria-expanded="false" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ 2. HOME (bento hero) ============ -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row g-3">
+
+          <!-- Intro -->
+          <div class="col-lg-8">
+            <div class="tile tile-intro h-100 reveal">
+              <span class="status-pill"><span class="pulse"></span> Open to internships · Summer 2027</span>
+              <h1 class="hero-title">
+                Hi, I'm <span class="grad">Sruthi</span>.<br>
+                I build software that <em>shows up</em> when it matters.
+              </h1>
+              <p class="hero-sub">
+                Third-year Integrated M.Tech CSE student at VIT-AP University, working on health tech,
+                AI and systems: emergency health records, fire-risk tracking, and apps that read
+                signs in languages you can't.
+              </p>
+              <div class="d-flex flex-wrap gap-2">
+                <a href="#projects" class="btn btn-accent">See my work <i class="bi bi-arrow-right"></i></a>
+                <a href="assets/resume.pdf" download="Sruthi_Chalamchala_Resume.pdf" class="btn btn-soft">
+                  <i class="bi bi-download"></i> Resume
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo -->
+          <div class="col-sm-6 col-lg-4">
+            <figure class="tile tile-photo h-100 reveal">
+              <img src="assets/img/profile.jpg" alt="Sruthi smiling, arms crossed, in a garden">
+              <figcaption><i class="bi bi-geo-alt-fill"></i> Kandukur, Andhra Pradesh</figcaption>
+            </figure>
+          </div>
+
+          <!-- Stats -->
+          <div class="col-6 col-sm-3 col-lg-2">
+            <div class="tile tile-stat h-100 reveal">
+              <span class="stat-num" data-count="8.23" data-decimals="2">0</span>
+              <span class="stat-label">CGPA</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 col-lg-2">
+            <div class="tile tile-stat h-100 reveal">
+              <span class="stat-num" data-count="96.9" data-decimals="1" data-suffix="%">0</span>
+              <span class="stat-label">Class 12</span>
+            </div>
+          </div>
+
+          <!-- Now studying -->
+          <div class="col-sm-6 col-lg-3">
+            <div class="tile tile-now h-100 reveal">
+              <span class="tile-label"><i class="bi bi-mortarboard"></i> Currently</span>
+              <p class="now-text">Year 3 of 5<br><span>Integrated M.Tech · CSE</span></p>
+              <div class="year-track" aria-hidden="true"><span style="width:50%"></span></div>
+            </div>
+          </div>
+
+          <!-- Tech marquee -->
+          <div class="col-sm-6 col-lg-5">
+            <div class="tile tile-marquee h-100 reveal">
+              <span class="tile-label"><i class="bi bi-stack"></i> Tools I reach for</span>
+              <div class="marquee" aria-label="Python, C, C++, TensorFlow, OpenCV, Solidity, MySQL, Git, Linux, Figma">
+                <div class="marquee-track">
+                  <span>Python</span><span>C</span><span>C++</span><span>TensorFlow</span><span>OpenCV</span>
+                  <span>Solidity</span><span>MySQL</span><span>Git</span><span>Linux</span><span>Figma</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATEMENT (scroll-lit text) ============ -->
+    <section class="statement" aria-label="Personal statement">
+      <div class="container">
+        <p class="statement-text" data-scroll-words>
+          Good engineering is quiet. It shows up in a hospital at 2 a.m., in a fire drill that
+          actually works, in a translation that helps someone find their way home. That's the
+          software I want to build.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 3. ABOUT ME ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">About me</span>
+          <h2 class="section-title">Curious by default,<br><span class="dim">careful by habit.</span></h2>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-5 col-lg-4">
+            <figure class="tile tile-portrait h-100 reveal">
+              <img src="assets/img/about.jpg" alt="Sruthi smiling at sunset" loading="lazy">
+            </figure>
+          </div>
+
+          <div class="col-md-7 col-lg-8">
+            <div class="row g-3 h-100">
+              <div class="col-12">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-compass"></i> Career objective</span>
+                  <p class="tile-lead">
+                    To grow into a software engineer who works where computer science meets everyday
+                    life, especially <mark>healthcare</mark> and <mark>public safety</mark>. Right now
+                    I'm looking for a software or AI/ML internship where I can ship real features,
+                    learn from experienced engineers, and keep getting better at writing clean,
+                    reliable code.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-stars"></i> Beyond the classroom</span>
+                  <p>
+                    I like proving that the quiet person in the lab can be the one who finds the bug.
+                    I help juniors in my hostel who are new to coding, because I believe more women in
+                    engineering starts with one person saying “you can do this”.
+                  </p>
+                  <div class="chips">
+                    <span class="chip"><i class="bi bi-people"></i> Women in Engineering</span>
+                    <span class="chip"><i class="bi bi-heart-pulse"></i> Health tech</span>
+                    <span class="chip"><i class="bi bi-pencil"></i> Sketching</span>
+                    <span class="chip"><i class="bi bi-music-note-beamed"></i> Carnatic music</span>
+                    <span class="chip"><i class="bi bi-book"></i> Reading</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-person-vcard"></i> Personal details</span>
+                  <dl class="details">
+                    <div><dt>Name</dt><dd>Chalamchala Seetha Sai Sruthi</dd></div>
+                    <div><dt>Program</dt><dd>Integrated M.Tech CSE</dd></div>
+                    <div><dt>Batch</dt><dd>2024 – 2029</dd></div>
+                    <div><dt>Languages</dt><dd>English, Telugu, Hindi</dd></div>
+                    <div><dt>Home</dt><dd>Kandukur, AP</dd></div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo strip -->
+        <div class="gallery-head reveal">
+          <span class="tile-label mb-0"><i class="bi bi-camera"></i> Off the clock</span>
+          <span class="gallery-hint">Scroll →</span>
+        </div>
+        <div class="gallery reveal" tabindex="0" aria-label="Photos of Sruthi">
+          <figure><img src="assets/img/g-laugh.jpg" alt="Sruthi laughing under a palm tree" loading="lazy"></figure>
+          <figure><img src="assets/img/g-desk.jpg" alt="Sruthi in a striped top, resting her arms on a table" loading="lazy"></figure>
+          <figure><img src="assets/img/g-festive.jpg" alt="Sruthi in traditional wear at a festive event" loading="lazy"></figure>
+          <figure><img src="assets/img/g-pose.jpg" alt="Sruthi posing with sunglasses on campus" loading="lazy"></figure>
+          <figure><img src="assets/img/g-shades.jpg" alt="Sruthi in sunglasses beside a tree" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. EDUCATION ============ -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Education</span>
+          <h2 class="section-title">Where I've studied.</h2>
+        </div>
+
+        <div class="timeline">
+          <span class="timeline-line" aria-hidden="true"></span>
+          <div class="timeline-item reveal">
+            <span class="timeline-dot current"></span>
+            <div class="card tile edu-card">
+              <div class="card-body">
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-8">
+                    <span class="edu-years">2024 – 2029 · In progress</span>
+                    <h3 class="card-title">Integrated M.Tech, Computer Science &amp; Engineering</h3>
+                    <p class="edu-school"><i class="bi bi-building"></i> VIT-AP University, Amaravati</p>
+                    <p class="edu-note">Coursework: Data Structures, OOP, DBMS, Operating Systems, Computer Networks, Software Engineering.</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <div class="edu-score">8.23</div>
+                    <span class="edu-score-label">CGPA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="card tile edu-card">
+              <div class="card-body">
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-8">
+                    <span class="edu-years">2022 – 2024</span>
+                    <h3 class="card-title">Intermediate (Class 12), MPC</h3>
+                    <p class="edu-school"><i class="bi bi-building"></i> Sri Chaitanya Junior College, Vijayawada</p>
+                    <p class="edu-note">Board of Intermediate Education, Andhra Pradesh.</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <div class="edu-score">969<small>/1000</small></div>
+                    <span class="edu-score-label">96.9%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-dot"></span>
+            <div class="card tile edu-card">
+              <div class="card-body">
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-8">
+                    <span class="edu-years">2022</span>
+                    <h3 class="card-title">Secondary School (Class 10)</h3>
+                    <p class="edu-school"><i class="bi bi-building"></i> Sri Chaitanya High School, Kandukur</p>
+                    <p class="edu-note">Board of Secondary Education, Andhra Pradesh.</p>
+                  </div>
+                  <div class="col-md-4 text-md-end">
+                    <div class="edu-score">579<small>/600</small></div>
+                    <span class="edu-score-label">96.5%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. SKILLS ============ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Skills</span>
+          <h2 class="section-title">What I work with.</h2>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-5">
+            <div class="tile h-100 reveal">
+              <span class="tile-label"><i class="bi bi-code-slash"></i> Programming languages</span>
+              <div class="skill" data-level="88"><div class="skill-row"><span>Python</span><span class="skill-pct">88%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Python"></div></div></div>
+              <div class="skill" data-level="82"><div class="skill-row"><span>C</span><span class="skill-pct">82%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" aria-label="C"></div></div></div>
+              <div class="skill" data-level="78"><div class="skill-row"><span>C++</span><span class="skill-pct">78%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="C++"></div></div></div>
+              <div class="skill" data-level="75"><div class="skill-row"><span>HTML &amp; CSS</span><span class="skill-pct">75%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="HTML and CSS"></div></div></div>
+              <div class="skill" data-level="70"><div class="skill-row"><span>SQL</span><span class="skill-pct">70%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="SQL"></div></div></div>
+              <div class="skill" data-level="65"><div class="skill-row"><span>JavaScript</span><span class="skill-pct">65%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript"></div></div></div>
+              <div class="skill mb-0" data-level="60"><div class="skill-row"><span>Java</span><span class="skill-pct">60%</span></div><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Java"></div></div></div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row g-3 h-100">
+              <div class="col-md-6">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-cpu"></i> AI &amp; data</span>
+                  <div class="badges">
+                    <span class="badge">NumPy</span><span class="badge">Pandas</span><span class="badge">scikit-learn</span>
+                    <span class="badge">TensorFlow</span><span class="badge">OpenCV</span><span class="badge">Tesseract OCR</span>
+                    <span class="badge">Matplotlib</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-boxes"></i> Web, blockchain &amp; databases</span>
+                  <div class="badges">
+                    <span class="badge">Bootstrap</span><span class="badge">Flask</span><span class="badge">MySQL</span>
+                    <span class="badge">Solidity</span><span class="badge">Ethereum</span><span class="badge">IPFS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-tools"></i> Tools</span>
+                  <div class="badges">
+                    <span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">Linux</span>
+                    <span class="badge">VS Code</span><span class="badge">Jupyter</span><span class="badge">Figma</span>
+                    <span class="badge">StarUML</span><span class="badge">Jira</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tile h-100 reveal">
+                  <span class="tile-label"><i class="bi bi-diagram-3"></i> Core CS</span>
+                  <div class="badges">
+                    <span class="badge badge-line">DSA</span><span class="badge badge-line">OOP</span>
+                    <span class="badge badge-line">DBMS</span><span class="badge badge-line">Operating Systems</span>
+                    <span class="badge badge-line">Computer Networks</span><span class="badge badge-line">Agile / Scrum</span>
+                    <span class="badge badge-line">UML</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head d-lg-flex justify-content-between align-items-end reveal">
+          <div>
+            <span class="kicker">Projects</span>
+            <h2 class="section-title">Things I've built.</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter" data-filter="health" aria-pressed="false">Healthcare</button>
+            <button class="filter" data-filter="ai" aria-pressed="false">AI / ML</button>
+            <button class="filter" data-filter="systems" aria-pressed="false">Systems</button>
+          </div>
+        </div>
+
+        <div class="row g-3" id="projectGrid">
+
+          <div class="col-md-6 col-lg-4 project-col reveal" data-tags="health systems">
+            <article class="card tile project-card h-100">
+              <div class="project-media"><img src="assets/img/medivault.svg" alt="Medi-Vault: a shield linked to a chain of blocks"></div>
+              <div class="card-body">
+                <p class="project-kind">Blockchain · Healthcare</p>
+                <h3 class="card-title">Medi-Vault</h3>
+                <p class="card-text">An emergency, decentralized health record system. Authorized doctors can pull up a patient's critical records, like allergies, blood group and current medication, in seconds, while the patient stays in control of who sees what.</p>
+                <div class="tech"><span>Solidity</span><span>Ethereum</span><span>IPFS</span><span>Web3.js</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 project-col reveal" data-tags="ai">
+            <article class="card tile project-card h-100">
+              <div class="project-media"><img src="assets/img/translate.svg" alt="Picture translation: a phone translating a Telugu sign to English"></div>
+              <div class="card-body">
+                <p class="project-kind">AI · UML design</p>
+                <h3 class="card-title">AI picture translation app</h3>
+                <p class="card-text">Point your camera at a sign, menu or notice and read it in your own language. The app finds text in the image with OCR, translates it, and overlays the result. Designed end to end with use-case, class and sequence diagrams.</p>
+                <div class="tech"><span>Python</span><span>OpenCV</span><span>Tesseract</span><span>StarUML</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 project-col reveal" data-tags="systems">
+            <article class="card tile project-card h-100">
+              <div class="project-media"><img src="assets/img/fire.svg" alt="Fire risk: a flame beside a risk heat map"></div>
+              <div class="card-body">
+                <p class="project-kind">Agile · Safety</p>
+                <h3 class="card-title">Fire risk management system</h3>
+                <p class="card-text">Identifies, scores and tracks fire risks across a building, with inspection checklists, a risk register and alerts for overdue fixes. Built over four Scrum sprints with user stories, a backlog and sprint reviews.</p>
+                <div class="tech"><span>Python</span><span>Flask</span><span>MySQL</span><span>Jira</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 project-col reveal" data-tags="systems">
+            <article class="card tile project-card h-100">
+              <div class="project-media"><img src="assets/img/xv6.svg" alt="xv6 kernel: a terminal and scheduling queues"></div>
+              <div class="card-body">
+                <p class="project-kind">Operating systems</p>
+                <h3 class="card-title">xv6 enhanced kernel</h3>
+                <p class="card-text">A modified xv6 operating system with Multi-Level Feedback Queue scheduling, a login screen with password security, and Ubuntu-style shell features like command history and tab completion.</p>
+                <div class="tech"><span>C</span><span>xv6</span><span>QEMU</span><span>MLFQ</span></div>
+                <a class="project-link" href="https://github.com/Nithinchalamchala/xv6-enhanced-kernel" target="_blank" rel="noopener">View code <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 project-col reveal" data-tags="ai health">
+            <article class="card tile project-card h-100">
+              <div class="project-media"><img src="assets/img/boneage.svg" alt="Bone age: a hand X-ray and a predicted age"></div>
+              <div class="card-body">
+                <p class="project-kind">Deep learning · Healthcare</p>
+                <h3 class="card-title">Bone age prediction</h3>
+                <p class="card-text">A convolutional neural network that estimates a child's skeletal age from a hand X-ray, the check doctors use to assess growth disorders. Trained and evaluated on a public pediatric X-ray dataset.</p>
+                <div class="tech"><span>Python</span><span>TensorFlow</span><span>CNN</span><span>Jupyter</span></div>
+                <a class="project-link" href="https://github.com/Nithinchalamchala/BoneAge_Prediction" target="_blank" rel="noopener">View code <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 project-col reveal" data-tags="ai systems">
+            <article class="card tile project-card h-100">
+              <div class="project-media"><img src="assets/img/manet.svg" alt="MANET: wireless nodes connected by links"></div>
+              <div class="card-body">
+                <p class="project-kind">ML · Networks</p>
+                <h3 class="card-title">Link stability in MANETs</h3>
+                <p class="card-text">Predicts how long a wireless link between moving devices will last, so routing can pick stable paths before they break. Useful for ad-hoc networks in disaster zones with no infrastructure.</p>
+                <div class="tech"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
+                <a class="project-link" href="https://github.com/Nithinchalamchala/ML-Based-Link-Stability-Prediction-for-Adaptive-Routing-in-MANETs" target="_blank" rel="noopener">View code <i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Certifications (placeholders — replace with real ones) -->
+        <div class="section-head mt-5 pt-4 reveal">
+          <span class="kicker">Achievements</span>
+          <h2 class="section-title section-title-sm">Certifications.</h2>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="tile cert h-100 reveal">
+              <span class="cert-icon"><i class="bi bi-patch-check-fill"></i></span>
+              <h3>Programming, Data Structures and Algorithms using Python</h3>
+              <p>NPTEL · IIT Madras</p>
+              <span class="cert-meta">Elite · 2025</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tile cert h-100 reveal">
+              <span class="cert-icon"><i class="bi bi-patch-check-fill"></i></span>
+              <h3>Machine Learning Specialization</h3>
+              <p>Coursera · Stanford &amp; DeepLearning.AI</p>
+              <span class="cert-meta">Completed · 2025</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tile cert h-100 reveal">
+              <span class="cert-icon"><i class="bi bi-patch-check-fill"></i></span>
+              <h3>AWS Academy Cloud Foundations</h3>
+              <p>Amazon Web Services</p>
+              <span class="cert-meta">Completed · 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="row g-3">
+          <div class="col-lg-5">
+            <div class="tile tile-cta h-100 reveal">
+              <span class="kicker">Contact</span>
+              <h2 class="section-title">Let's build something.</h2>
+              <p class="tile-lead">Have an internship, a project idea or a question? Send a message and I'll get back to you.</p>
+
+              <div class="contact-row">
+                <span class="c-icon"><i class="bi bi-envelope"></i></span>
+                <div class="flex-grow-1 min-w-0">
+                  <span class="c-label">Email</span>
+                  <a href="mailto:chalamchala2005@gmail.com" class="c-value">chalamchala2005@gmail.com</a>
+                </div>
+                <button class="icon-btn" id="copyEmail" type="button" aria-label="Copy email address"><i class="bi bi-copy"></i></button>
+              </div>
+              <div class="contact-row">
+                <span class="c-icon"><i class="bi bi-telephone"></i></span>
+                <div><span class="c-label">Phone</span><a href="tel:+918309871838" class="c-value">+91 83098 71838</a></div>
+              </div>
+              <div class="contact-row">
+                <span class="c-icon"><i class="bi bi-geo-alt"></i></span>
+                <div><span class="c-label">Address</span><span class="c-value">Ramanjaneya Nagar, Vippagunta Road, Kandukur, AP</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form id="contactForm" class="tile contact-form h-100 reveal" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Your name" autocomplete="name">
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="you@example.com" autocomplete="email">
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-12">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" class="form-control" placeholder="What's this about?">
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" rows="5" maxlength="1000" placeholder="Write your message"></textarea>
+                  <div class="d-flex justify-content-between gap-2">
+                    <div class="invalid-feedback d-block"></div>
+                    <small class="char-count" id="charCount">0 / 1000</small>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-accent w-100">Send message <i class="bi bi-send"></i></button>
+                </div>
+              </div>
+              <div id="formSuccess" class="form-success" role="status" aria-live="polite" hidden></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <span>© <span id="year"></span> Chalamchala Seetha Sai Sruthi</span>
+        <a href="#home" class="footer-top">Back to top <i class="bi bi-arrow-up"></i></a>
+      </div>
+      <div class="wordmark" aria-hidden="true">Sruthi</div>
+    </div>
+  </footer>
+
+  <div class="toast-copy" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
