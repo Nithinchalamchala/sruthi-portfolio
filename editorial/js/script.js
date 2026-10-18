@@ -55,7 +55,7 @@ function animateCount(el) {
   if (reduceMotion) return;
   const start = performance.now();
   (function tick(now) {
-    const p = Math.min((now - start) / 1600, 1);
+    const p = Math.min(Math.max((now - start) / 1600, 0), 1);
     el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(decimals) + suffix;
     if (p < 1) requestAnimationFrame(tick);
   })(start);

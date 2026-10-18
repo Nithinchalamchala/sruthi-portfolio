@@ -97,7 +97,7 @@ function animateCount(el) {
   const duration = 1400;
   const start = performance.now();
   function tick(now) {
-    const p = Math.min((now - start) / duration, 1);
+    const p = Math.min(Math.max((now - start) / duration, 0), 1);
     const eased = 1 - Math.pow(1 - p, 3);
     el.textContent = (target * eased).toFixed(decimals) + suffix;
     if (p < 1) requestAnimationFrame(tick);
@@ -164,7 +164,7 @@ filterButtons.forEach(btn => {
 
 // ---------- Copy email ----------
 document.getElementById("copyEmail").addEventListener("click", async () => {
-  const email = "chalamchala2005@gmail.com";
+  const email = "sruthichalamchala@gmail.com";
   try {
     await navigator.clipboard.writeText(email);
     showToast("Email address copied");
@@ -248,7 +248,7 @@ form.addEventListener("submit", e => {
 
   const name = fields.name.value.trim();
   const body = `${fields.message.value.trim()}\n\n— ${name} (${fields.email.value.trim()})`;
-  const mailto = `mailto:chalamchala2005@gmail.com?subject=${encodeURIComponent(fields.subject.value.trim())}&body=${encodeURIComponent(body)}`;
+  const mailto = `mailto:sruthichalamchala@gmail.com?subject=${encodeURIComponent(fields.subject.value.trim())}&body=${encodeURIComponent(body)}`;
 
   success.textContent = `Thanks, ${name}. Your email app is opening with this message ready to send.`;
   success.hidden = false;
