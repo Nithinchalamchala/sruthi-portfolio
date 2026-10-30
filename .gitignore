@@ -2,3 +2,7 @@
 WhatsApp Image *.jpeg
 about_ME.md
 .DS_Store
+
+# Assignment report & reference documents (kept private)
+*.docx
+report/
